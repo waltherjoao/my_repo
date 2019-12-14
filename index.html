@@ -2,9 +2,20 @@
 <html>
 <head>
 	<title>My first webpage</title>
+	<script type="text/javascript">
+		function setBorderWidth(width) {
+		  document.getElementById("img1").style.borderWidth = width + "px";
+		  var titulo = document.getElementById("presentacion");
+		  titulo.style.color = "blue";
+		  titulo.style.fontSize = "18pt";
+		  var titulo = document.getElementById("presentacion_two");
+		  titulo.style.color = "yellow";
+		  titulo.style.fontSize = "15pt";
+		}
+	</script>
 </head>
 <body>
-	<h1>Web Neutrality</h1>
+	<h1 id="presentacion">Web Neutrality</h1>
 	<il>
 		<li>Baidal Tania</li>
 		<li>Valladares Miguel</li>
@@ -14,10 +25,16 @@
 
 	<br><br>
 
-	<h2>Qué es Web Neutrality?</h2>
+	<h2 id="presentacion_two">Qué es Web Neutrality?</h2>
 	<p>Es el principio por el cual los proveedores de servicios de Internet y los gobiernos que la regulan, deben tratar a todo tráfico de datos que transita por la red de igual forma indiscriminadamente.
 	</p>
-	<img src="Picture1.png">
+	<img id="img1" src="Picture1.png" style="border: 5px solid yellow; border-radius: 50%" width="100"
+height="100" >
+	<form name="Formulario">
+	  <p><input type="button" value="Definir un borde de 20px" 
+	onclick="setBorderWidth(20);"> <input type="button" value="Definir un borde de 5px" 
+	onclick="setBorderWidth(5);"></p>
+	</form>
 
 	<br><br>
 
